@@ -6,7 +6,7 @@ Here you can find a description of the commands used to describe this bulletin.
 
 
 ### pre-processing
-
-...sh
+```sh
 $ command
-...
+
+```
