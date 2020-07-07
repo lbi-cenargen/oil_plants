@@ -36,3 +36,33 @@ elaeis_guinnensis_R1_clipped.fastq | jatropha_sp_R1_clipped.fastq | ricinus_comm
 elaeis_guinnensis_R2_clipped.fastq | jatropha_sp_R2_clipped.fastq | ricinus_communis_R2_clipped.fastq
 
 #### Velveth/Oases
+
+```sh
+$ velveth [nº k-mer] -fastq -shortPaired INPUT_R1_clipped_cutadapt.fastq INPUT_R2_clipped_cutadapt.fastq
+```
+
+#### HISAT2
+```sh
+$ hisat2 -x [hisat index PATH] -1 INPUT_R1_clipped_cutadapt.fastq -2 INPUT_R2_clipped_cutadapt.fastq
+```
+
+#### SPAdes
+```sh
+$ python spades.py -o [output PATH] --rna -1 INPUT_R1_clipped_cutadapt.fastq  -2 INPUT_R2_clipped_cutadapt.fastq  -k [nº k-mer]
+```
+
+#### SOAP
+```sh
+$ SOAPdenovo-Trans-31mer all -s [config file] -o [output PATH] -p 10 -M 1
+```
+
+#### STAR
+
+##### creating index
+```sh
+$ STAR --runThreadN 10 --runMode genomeGenerate --genomeDir [output PATH] --genomeFastaFiles [reference genome file (fasta file)]
+```
+##### running star
+```sh
+$ STAR --runThreadN 10 --genomeDir [outuput PATH] --sjdbGTFfile [GTF file] --sjdbOverhang 100 --readFilesIn [INPUT_R1_clipped_cutadapt.fastq] [INPUT_R2_clipped_cutadapt.fastq] --outSAMtype BAM SortedByCoordinate Unsorted --outReadsUnmapped Fastx --outFileNamePrefix [output prefix name] --quantMode TranscriptomeSAM
+```
