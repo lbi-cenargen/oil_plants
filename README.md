@@ -58,7 +58,7 @@ $ SOAPdenovo-Trans-31mer all -s [config file] -o [output PATH] -p 10 -M 1
 
 #### STAR
 
-##### creating index
+##### creating star index
 ```sh
 $ STAR --runThreadN 10 --runMode genomeGenerate --genomeDir [output PATH] --genomeFastaFiles [reference genome file (fasta file)]
 ```
