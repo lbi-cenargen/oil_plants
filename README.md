@@ -17,7 +17,10 @@ elaeis_guinnensis_2.fastq | jatropha_sp_2.fastq | ricinus_communis_2.fastq
 
 
 ### pre-processing
+
+#### fastqc
+
 ```sh
-$ command
+$ fastqc elaeis_guinnensis_1.fastq elaeis_guinnensis_2.fastq
 
 ```
