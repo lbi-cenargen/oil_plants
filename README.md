@@ -18,7 +18,7 @@ elaeis_guinnensis_R2.fastq | jatropha_sp_R2.fastq | ricinus_communis_R2.fastq
 
 ### pre-processing
 
-#### [fastqc] (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) - A quality control tool for high throughput sequence data 
+#### [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) - A quality control tool for high throughput sequence data 
 
 ```sh
 $ fastqc elaeis_guinnensis_R1.fastq elaeis_guinnensis_R2.fastq
