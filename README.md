@@ -11,8 +11,8 @@ The following files are used for the processing:
 
 E. guineensis | J. curcas | R. communis
 ------------ | ------------- | -------------
-elaeis_guinnensis_1.fastq | jatropha_sp_1.fastq | ricinus_communis_1.fastq| 
-elaeis_guinnensis_2.fastq | jatropha_sp_2.fastq | ricinus_communis_2.fastq
+elaeis_guinnensis_R1.fastq | jatropha_sp_R1.fastq | ricinus_communis_R1.fastq| 
+elaeis_guinnensis_R2.fastq | jatropha_sp_R2.fastq | ricinus_communis_R2.fastq
 
 
 
@@ -21,6 +21,7 @@ elaeis_guinnensis_2.fastq | jatropha_sp_2.fastq | ricinus_communis_2.fastq
 #### fastqc
 
 ```sh
-$ fastqc elaeis_guinnensis_1.fastq elaeis_guinnensis_2.fastq
-
+$ fastqc elaeis_guinnensis_R1.fastq elaeis_guinnensis_R2.fastq
+or
+$ fastqc elaeis_guinnensis_R*
 ```
