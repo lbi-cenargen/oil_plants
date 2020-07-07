@@ -21,9 +21,9 @@ elaeis_guinnensis_R2.fastq | jatropha_sp_R2.fastq | ricinus_communis_R2.fastq
 #### [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) - A quality control tool for high throughput sequence data 
 
 ```sh
-$ fastqc elaeis_guinnensis_R1.fastq elaeis_guinnensis_R2.fastq
+$ fastqc INPUT_R1.fastq INPUT_R2.fastq
 or
-$ fastqc elaeis_guinnensis_R*
+$ fastqc INPUT_R*
 ```
 
 #### [cutadapt](https://cutadapt.readthedocs.io/en/stable/) - Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.
