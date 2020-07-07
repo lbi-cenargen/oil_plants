@@ -24,4 +24,10 @@ elaeis_guinnensis_R2.fastq | jatropha_sp_R2.fastq | ricinus_communis_R2.fastq
 $ fastqc elaeis_guinnensis_R1.fastq elaeis_guinnensis_R2.fastq
 or
 $ fastqc elaeis_guinnensis_R*
+
+#### [cutadapt](https://cutadapt.readthedocs.io/en/stable/) - Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.
+
+```sh
+$ cutadapt -a AGATCGGAAGAG  -A AGATCGGAAGAG -o INPUT_R1_clipped_cutadapt.fastq  -p INPUT_R2_clipped_cutadapt.fastq  -f fastq --minimum-length=16 INPUT_R1_clipped.fastq INPUT_R2_clipped.fastq
+```
 ```
