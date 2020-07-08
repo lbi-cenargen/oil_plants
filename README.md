@@ -2,9 +2,13 @@
 
 This is a part of Embrapa Genetic Resources and Biotecnology research bulletin called : "Combinação de abordagens de análises de novo e guiadas pelo genoma para explorar dados de RNA-Seq de sementes oleaginosas para anotação de vias de ácidos graxos". 
 Here you can find a description of the commands used to describe this bulletin.
+
 ---
+
 ## pre-processing
+
 ---
+
 In this project three species are used in the study: *E. guineensis, J. curcas, R. communis*
 
 The following files are used for the processing:
@@ -28,8 +32,11 @@ $ fastqc INPUT_R*
 $ cutadapt -a AGATCGGAAGAG  -A AGATCGGAAGAG -o INPUT_R1_clipped_cutadapt.fastq  -p INPUT_R2_clipped_cutadapt.fastq  -f fastq --minimum-length=16 INPUT_R1_clipped.fastq INPUT_R2_clipped.fastq
 ```
 ---
+
 ### Transcritome assembly
+
 ---
+
 The following files are used for the processing:
 
 E. guineensis | J. curcas | R. communis
