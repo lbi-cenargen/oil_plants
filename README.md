@@ -1,6 +1,6 @@
 # Oil plants RNASeq analysis pipeline
 
-This is a part of Embrapa Genetic Resources and Biotecnology research bulletin called : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+This is a part of Embrapa Genetic Resources and Biotecnology research bulletin called : "Combinação de abordagens de análises de novo e guiadas pelo genoma para explorar dados de RNA-Seq de sementes oleaginosas para anotação de vias de ácidos graxos". 
 Here you can find a description of the commands used to describe this bulletin.
 
 ### pre-processing
