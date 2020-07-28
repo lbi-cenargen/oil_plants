@@ -81,7 +81,7 @@ $ STAR --runThreadN 10 --genomeDir [outuput PATH] --sjdbGTFfile [GTF file] --sjd
 
 ---
 
-#### <A Href="http://arthropods.eugenes.org/about/about-EvidentialGene/"  target="_blank">Evidential Gene</A>
+#### <A Href="http://arthropods.eugenes.org/about/about-EvidentialGene/"  target="_blank1">Evidential Gene</A>
 
 The input for this method is the resulting assembly for the previous steps.
 To prepare the input for EvidentialGene, the trformat.pl script was used
@@ -99,7 +99,7 @@ EvidentialGene_dir/scripts/prot/tr2aacds2.pl -mrnaseq ALL_transcripts.fasta
 ### Completeness analysis
 
 ---
-#### <A Href="https://busco.ezlab.org/" target="_blank"> BUSCO</A>
+#### <A Href="https://busco.ezlab.org/" target="_blank2"> BUSCO</A>
 "BUSCO attempts to provide a quantitative assessment of the completeness in terms of expected gene content of a genome assembly, transcriptome, or annotated gene set"
 
 For the input to run BUSCO we used the result of Evidential Gene for each Transcriptome. The used command is as following:
