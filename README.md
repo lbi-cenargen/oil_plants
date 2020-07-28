@@ -99,6 +99,7 @@ EvidentialGene_dir/scripts/prot/tr2aacds2.pl -mrnaseq ALL_transcripts.fasta
 ### Completeness analysis
 
 ---
+#### [BUSCO](https://busco.ezlab.org/){:target="_blank"}
 
 #### [BUSCO](https://busco.ezlab.org/)
 "BUSCO attempts to provide a quantitative assessment of the completeness in terms of expected gene content of a genome assembly, transcriptome, or annotated gene set"
