@@ -1,6 +1,6 @@
 # Oil plants RNASeq analysis pipeline
 
-This is a part of Embrapa Genetic Resources and Biotecnology research bulletin called : "Combinação de abordagens de análises de novo e guiadas pelo genoma para explorar dados de RNA-Seq de sementes oleaginosas para anotação de vias de ácidos graxos". 
+This is a part of Embrapa Genetic Resources and Biotecnology research bulletin called : "Combinação de abordagens de análises de novo e guiadas pelo genoma para explorar dados de RNA-Seq de sementes oleaginosas para anotação de vias de ácidos graxos".
 Here you can find a description of the commands used to describe this bulletin.
 
 ---
@@ -74,4 +74,37 @@ $ STAR --runThreadN 10 --runMode genomeGenerate --genomeDir [output PATH] --geno
 ##### running star
 ```sh
 $ STAR --runThreadN 10 --genomeDir [outuput PATH] --sjdbGTFfile [GTF file] --sjdbOverhang 100 --readFilesIn [INPUT_R1_clipped_cutadapt.fastq] [INPUT_R2_clipped_cutadapt.fastq] --outSAMtype BAM SortedByCoordinate Unsorted --outReadsUnmapped Fastx --outFileNamePrefix [output prefix name] --quantMode TranscriptomeSAM
+```
+---
+
+### Evidence Directed Gene Construction
+
+---
+
+#### [Evidential Gene](http://arthropods.eugenes.org/about/about-EvidentialGene/)
+
+The input for this method is the resulting assembly for the previous steps.
+To prepare the input for EvidentialGene, the trformat.pl script was used
+
+```sh
+EvidentialGene_dir/scripts/rnaseq/trformat.pl -output all.tr  -input transcripts.fasta[.gz]  tr2.fasta  tr3.fasta etc
+```
+
+After this step, the method is called as following
+```sh
+EvidentialGene_dir/scripts/prot/tr2aacds2.pl -mrnaseq ALL_transcripts.fasta
+```
+---
+
+### Completeness analysis
+
+---
+
+#### [BUSCO](https://busco.ezlab.org/)
+"BUSCO attempts to provide a quantitative assessment of the completeness in terms of expected gene content of a genome assembly, transcriptome, or annotated gene set"
+
+For the input to run BUSCO we used the result of Evidential Gene for each Transcriptome. The used command is as following:
+
+```sh
+BUSCO_V3/scripts/run_BUSCO.py -m tran -o <output PATH> -i <input PATH> -l /BUSCO_V3/datasets/embryophyta_odb9 -c 10
 ```
