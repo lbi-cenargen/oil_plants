@@ -2,6 +2,6 @@
 
 ```sh
 
-Build_KEGG_Database.bash example_of_kegg_code.txt
+./Build_KEGG_Database.bash example_of_kegg_code.txt
 
 ```
