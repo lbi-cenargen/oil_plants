@@ -1,4 +1,4 @@
-### To run this script download the filesand execute the following command
+### To run the database preparation script download the files and execute the following command:
 
 ```sh
 
