@@ -128,7 +128,4 @@ jcu00100
 ..
 ...
 ```
-Download a file with KEGG information for each code
-```sh
-$ for i in `cat kegg_code_JCU.txt`;do wget http://rest.kegg.jp/get/$i;done
-```
+Download a file with KEGG information for each code using the scripts available at: https://github.com/lbi-cenargen/oil_plants/tree/master/scripts
